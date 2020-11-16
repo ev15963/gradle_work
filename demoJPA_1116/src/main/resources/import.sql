@@ -25,8 +25,3 @@ INSERT INTO demo_tbl VALUES (hibernate_sequence.NEXTVAL, '김병현');
 INSERT INTO demo_tbl VALUES (hibernate_sequence.NEXTVAL, '추신수');
 INSERT INTO demo_tbl VALUES (hibernate_sequence.NEXTVAL, '서재응');
 INSERT INTO demo_tbl VALUES (hibernate_sequence.NEXTVAL, '김선우');
-
-CREATE TABLE demo_tbl (
-id integer,
-name VARCHAR2(20) 
-);

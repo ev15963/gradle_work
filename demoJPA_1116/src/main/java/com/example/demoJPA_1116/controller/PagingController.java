@@ -33,7 +33,6 @@ public class PagingController {
 	}
 
 	@RequestMapping("/sort")
-
 	public String sort(Model model) {
 
 		log.info("sort");
@@ -44,7 +43,6 @@ public class PagingController {
 	} //
 
 	@RequestMapping("/paging")
-
 	public String paging(@RequestParam("page") int page, Model model) {
 
 		log.info("paging");
