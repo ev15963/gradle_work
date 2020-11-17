@@ -19,9 +19,16 @@ import com.example.demoJPA_1116.domain.DemoVO;
 import com.example.demoJPA_1116.service.PagingJpaService;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * <b>Home Controller
+ * 
+ * @author 
+ * @version 1.0
+ *
+ */
+
 @Controller
 @Slf4j
-
 public class PagingController {
 
 	@Autowired

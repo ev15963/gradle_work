@@ -1,0 +1,96 @@
+2020-11-17 11:18:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:18:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:18:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:18:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:19:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:19:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:19:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:19:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:20:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:20:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:20:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:20:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:21:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:21:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:21:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:21:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:22:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:22:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:22:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:22:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:23:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:23:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.a.catalina.core.StandardContext ---
+				이름이 []인 컨텍스트를 다시 로드하는 작업이 시작되었습니다.
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.a.c.c.C.[Catalina].[localhost].[/] ---
+				Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.a.c.c.C.[Catalina].[localhost].[/] ---
+				Closing Spring root WebApplicationContext
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:23:24 [Catalina-utility-2] DEBUG o.h.internal.SessionFactoryImpl ---
+				HHH000031: Closing
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl ---
+				HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-17 11:23:24 [Catalina-utility-2] DEBUG o.h.type.spi.TypeConfiguration$Scope ---
+				Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@44d88e83] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@633e4e8]
+2020-11-17 11:23:24 [Catalina-utility-2] DEBUG o.h.s.i.AbstractServiceRegistryImpl ---
+				Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2020-11-17 11:23:24 [Catalina-utility-2] DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl ---
+				Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.s.s.c.ThreadPoolTaskExecutor ---
+				Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  o.s.s.c.ThreadPoolTaskExecutor ---
+				Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  com.zaxxer.hikari.HikariDataSource ---
+				HikariPool-1 - Shutdown initiated...
+2020-11-17 11:23:24 [Catalina-utility-2] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4ddc39b0: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3db61474: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4025af08: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3879e926: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@71945073: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@237dc093: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@4b2e55bb: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@3baba44: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@76eefe83: (connection evicted)
+2020-11-17 11:23:24 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-1 - Closing connection oracle.jdbc.driver.T4CConnection@1a767525: (connection evicted)
+2020-11-17 11:23:24 [Catalina-utility-2] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2020-11-17 11:23:24 [Catalina-utility-2] INFO  com.zaxxer.hikari.HikariDataSource ---
+				HikariPool-1 - Shutdown completed.

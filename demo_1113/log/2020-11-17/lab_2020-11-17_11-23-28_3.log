@@ -1,0 +1,193 @@
+2020-11-17 11:23:32 [task-1] DEBUG o.h.boot.model.relational.Namespace ---
+				Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2020-11-17 11:23:32 [task-1] DEBUG o.h.type.spi.TypeConfiguration$Scope ---
+				Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@23dfb7a] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2efa2fa]
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.AnnotationBinder ---
+				Binding entity from annotated class: com.example.demoJPA_1116.domain.DemoVO
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Ejb3Column ---
+				Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.annotations.EntityBinder ---
+				Import with entity name DemoVO
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.annotations.EntityBinder ---
+				Bind entity com.example.demoJPA_1116.domain.DemoVO on table demo_tbl
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Ejb3Column ---
+				Binding column: Ejb3Column{table=org.hibernate.mapping.Table(demo_tbl), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.annotations.PropertyBinder ---
+				MetadataSourceProcessor property id with lazy=false
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.AbstractPropertyHolder ---
+				Attempting to locate auto-apply AttributeConverter for property [com.example.demoJPA_1116.domain.DemoVO:id]
+2020-11-17 11:23:32 [task-1] DEBUG o.h.c.annotations.SimpleValueBinder ---
+				building SimpleValue for id
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.annotations.PropertyBinder ---
+				Building property id
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.BinderHelper ---
+				#makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Ejb3Column ---
+				Binding column: Ejb3Column{table=org.hibernate.mapping.Table(demo_tbl), mappingColumn=name, insertable=true, updatable=true, unique=false}
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.annotations.PropertyBinder ---
+				MetadataSourceProcessor property name with lazy=false
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.AbstractPropertyHolder ---
+				Attempting to locate auto-apply AttributeConverter for property [com.example.demoJPA_1116.domain.DemoVO:name]
+2020-11-17 11:23:32 [task-1] DEBUG o.h.c.annotations.SimpleValueBinder ---
+				building SimpleValue for name
+2020-11-17 11:23:32 [task-1] DEBUG o.h.cfg.annotations.PropertyBinder ---
+				Building property name
+2020-11-17 11:23:32 [task-1] DEBUG o.h.c.annotations.SimpleValueBinder ---
+				Starting fillSimpleValue for id
+2020-11-17 11:23:32 [task-1] DEBUG o.h.c.annotations.SimpleValueBinder ---
+				Starting fillSimpleValue for name
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.mapping.PrimaryKey ---
+				Forcing column [id] to be non-null as it is part of the primary key for table [demo_tbl]
+2020-11-17 11:23:32 [task-1] DEBUG o.h.internal.SessionFactoryImpl ---
+				Building session factory
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				SessionFactory name : null
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Automatic flush during beforeCompletion(): enabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Automatic session close at end of transaction: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Statistics: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Deleted entity synthetic identifier rollback: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Default entity-mode: pojo
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Allow initialization of lazy state outside session : disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Using BatchFetchStyle : LEGACY
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Default batch fetch size: -1
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Maximum outer join fetch depth: null
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Default null ordering: NONE
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Order SQL updates by primary key: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Order SQL inserts for batching: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				multi-tenancy strategy : NONE
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JTA Track by Thread: enabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Query language substitutions: {}
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Named query checking : enabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Second-level cache: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Second-level query cache: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Second-level query cache factory: null
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Second-level cache region prefix: null
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Optimize second-level cache for minimal puts: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Structured second-level cache entries: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Second-level cache direct-reference entries: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Automatic eviction of collection cache: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JDBC batch size: 15
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JDBC batch updates for versioned data: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Scrollable result sets: enabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Wrap result sets: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JDBC3 getGeneratedKeys(): disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JDBC result set fetch size: null
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Connection release mode: ON_CLOSE
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				Generate SQL with comments: disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JPA compliance - query : disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JPA compliance - closed-handling : disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JPA compliance - lists : disabled
+2020-11-17 11:23:32 [task-1] DEBUG org.hibernate.cfg.Settings ---
+				JPA compliance - transactions : disabled
+2020-11-17 11:23:32 [task-1] DEBUG o.h.internal.SessionFactoryImpl ---
+				Session factory constructed with filter configurations : {}
+2020-11-17 11:23:32 [task-1] DEBUG o.h.internal.SessionFactoryImpl ---
+				Instantiating session factory with properties: {hibernate.id.new_generator_mappings=true, java.specification.version=15, sun.cpu.isalist=amd64, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@551d1690, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=MS949, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=J:\student\lsw\tomcats\apache-tomcat-9.0.39\bin\bootstrap.jar;J:\student\lsw\tomcats\apache-tomcat-9.0.39\bin\tomcat-juli.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=https://java.oracle.com/, catalina.useNaming=true, user.timezone=Asia/Seoul, java.vm.specification.version=15, os.name=Windows 10, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=KR, sun.boot.library.path=J:\student\lsw\eclipses\sts-4-4.8.1.RELEASE-e4.17.0\contents\sts-4.8.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.0.v20201014-1246\jre\bin, sun.java.command=org.apache.catalina.startup.Bootstrap start, javax.persistence.nonJtaDataSource=HikariDataSource (HikariPool-2), hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@66501a1a, javax.persistence.sharedCache.mode=UNSPECIFIED, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\admin, user.language=ko, java.specification.vendor=Oracle Corporation, java.naming.factory.url.pkgs=org.apache.naming, java.version.date=2020-09-15, java.home=J:\student\lsw\eclipses\sts-4-4.8.1.RELEASE-e4.17.0\contents\sts-4.8.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.0.v20201014-1246\jre, file.separator=\, java.vm.compressedOopsMode=32-bit, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.headless=true, package.access=sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat., package.definition=sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat., hibernate.hbm2ddl.auto=create-drop, user.script=, server.loader=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=15+36-1562, java.naming.factory.initial=org.apache.naming.java.javaURLContextFactory, user.name=admin, path.separator=;, common.loader="J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0/lib","J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0/lib/*.jar","J:\student\lsw\tomcats\apache-tomcat-9.0.39/lib","J:\student\lsw\tomcats\apache-tomcat-9.0.39/lib/*.jar", os.version=10.0, java.runtime.name=OpenJDK Runtime Environment, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=default, spring.beaninfo.ignore=true, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\, tomcat.util.scan.StandardJarScanFilter.jarsToScan=log4j-taglib*.jar,log4j-web*.jar,log4javascript*.jar,slf4j-taglib*.jar, com.zaxxer.hikari.pool_number=1, catalina.home=J:\student\lsw\tomcats\apache-tomcat-9.0.39, java.version=15, tomcat.util.scan.StandardJarScanFilter.jarsToSkip=annotations-api.jar,ant-junit*.jar,ant-launcher.jar,ant.jar,asm-*.jar,aspectj*.jar,bootstrap.jar,catalina-ant.jar,catalina-ha.jar,catalina-ssi.jar,catalina-storeconfig.jar,catalina-tribes.jar,catalina.jar,cglib-*.jar,cobertura-*.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-daemon.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,dom4j-*.jar,easymock-*.jar,ecj-*.jar,el-api.jar,geronimo-spec-jaxrpc*.jar,h2*.jar,hamcrest-*.jar,hibernate*.jar,httpclient*.jar,icu4j-*.jar,jasper-el.jar,jasper.jar,jaspic-api.jar,jaxb-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,jmx-tools.jar,jmx.jar,jsp-api.jar,jstl.jar,jta*.jar,junit-*.jar,junit.jar,log4j*.jar,mail*.jar,objenesis-*.jar,oraclepki.jar,oro-*.jar,servlet-api-*.jar,servlet-api.jar,slf4j*.jar,taglibs-standard-spec-*.jar,tagsoup-*.jar,tomcat-api.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-i18n-*.jar,tomcat-jdbc.jar,tomcat-jni.jar,tomcat-juli-adapters.jar,tomcat-juli.jar,tomcat-util-scan.jar,tomcat-util.jar,tomcat-websocket.jar,tools.jar,websocket-api.jar,wsdl4j*.jar,xercesImpl.jar,xml-apis.jar,xmlParserAPIs-*.jar,xmlParserAPIs.jar,xom-*.jar, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, user.dir=C:\spring-tool-suite-4-4.8.1\sts-4.8.1.RELEASE, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, PID=6428, sun.os.patch.level=, catalina.base=J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0, shared.loader=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@4dfa22b8, wtp.deploy=J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps, java.library.path=J:\student\lsw\eclipses\sts-4-4.8.1.RELEASE-e4.17.0\contents\sts-4.8.1.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.0.v20201014-1246\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/spring-tool-suite-4-4.8.1/sts-4.8.1.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.0.v20201014-1246/jre/bin/server;C:/spring-tool-suite-4-4.8.1/sts-4.8.1.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.0.v20201014-1246/jre/bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Docker Toolbox;C:\Program Files (x86)\ESTsoft\ALSee\x64;C:\spring-tool-suite-4-4.8.1\sts-4.8.1.RELEASE;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=15+36-1562, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.archive.scanner=org.hibernate.boot.archive.scan.internal.DisabledScanner, hibernate.connection.datasource=HikariDataSource (HikariPool-2), tomcat.util.buf.StringCache.byte.enabled=true, java.class.version=59.0}
+2020-11-17 11:23:32 [task-1] DEBUG o.h.secure.spi.JaccIntegrator ---
+				Skipping JACC integration as it was not enabled
+2020-11-17 11:23:32 [task-1] DEBUG o.h.internal.SessionFactoryImpl ---
+				Instantiated session factory
+2020-11-17 11:23:32 [task-1] DEBUG o.h.type.spi.TypeConfiguration$Scope ---
+				Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@23dfb7a] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@2beef8dc]
+2020-11-17 11:23:32 [task-1] DEBUG o.h.b.internal.ClassLoaderAccessImpl ---
+				Not known whether passed class name [com.example.demoJPA_1116.domain.DemoVO] is safe
+2020-11-17 11:23:32 [task-1] DEBUG o.h.b.internal.ClassLoaderAccessImpl ---
+				No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demoJPA_1116.domain.DemoVO
+2020-11-17 11:23:32 [task-1] DEBUG o.h.b.internal.ClassLoaderAccessImpl ---
+				Not known whether passed class name [com.example.demoJPA_1116.domain.DemoVO] is safe
+2020-11-17 11:23:32 [task-1] DEBUG o.h.b.internal.ClassLoaderAccessImpl ---
+				No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.demoJPA_1116.domain.DemoVO
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.entity.AbstractEntityPersister ---
+				Static SQL for entity: com.example.demoJPA_1116.domain.DemoVO
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.entity.AbstractEntityPersister ---
+				 Version select: select id from demo_tbl where id =?
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.entity.AbstractEntityPersister ---
+				 Snapshot select: select demovo_.id, demovo_.name as name2_0_ from demo_tbl demovo_ where demovo_.id=?
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.entity.AbstractEntityPersister ---
+				 Insert 0: insert into demo_tbl (name, id) values (?, ?)
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.entity.AbstractEntityPersister ---
+				 Update 0: update demo_tbl set name=? where id=?
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.entity.AbstractEntityPersister ---
+				 Delete 0: delete from demo_tbl where id=?
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl ---
+				Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1adc2ce8]
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.w.spi.MetamodelGraphWalker ---
+				Visiting attribute path : name
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy ---
+				Building LoadPlan...
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor ---
+				processing queryspace <gen:0>
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter ---
+				LoadPlan(entity=com.example.demoJPA_1116.domain.DemoVO)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demoJPA_1116.domain.DemoVO, querySpaceUid=<gen:0>, path=com.example.demoJPA_1116.domain.DemoVO)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demoJPA_1116.domain.DemoVO)
+          - SQL table alias mapping - demovo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2020-11-17 11:23:33 [task-1] DEBUG o.h.loader.entity.plan.EntityLoader ---
+				Static select for entity com.example.demoJPA_1116.domain.DemoVO [NONE]: select demovo0_.id as id1_0_0_, demovo0_.name as name2_0_0_ from demo_tbl demovo0_ where demovo0_.id=?
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.b.i.spaces.QuerySpacesImpl ---
+				Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6311f993]
+2020-11-17 11:23:33 [task-1] DEBUG o.h.p.w.spi.MetamodelGraphWalker ---
+				Visiting attribute path : name
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy ---
+				Building LoadPlan...
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.e.i.LoadQueryJoinAndFetchProcessor ---
+				processing queryspace <gen:0>
+2020-11-17 11:23:33 [task-1] DEBUG o.h.l.p.b.spi.LoadPlanTreePrinter ---
+				LoadPlan(entity=com.example.demoJPA_1116.domain.DemoVO)
+    - Returns
+       - EntityReturnImpl(entity=com.example.demoJPA_1116.domain.DemoVO, querySpaceUid=<gen:0>, path=com.example.demoJPA_1116.domain.DemoVO)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.demoJPA_1116.domain.DemoVO)
+          - SQL table alias mapping - demovo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2020-11-17 11:23:33 [task-1] DEBUG o.h.loader.entity.plan.EntityLoader ---
+				Static select for entity com.example.demoJPA_1116.domain.DemoVO [READ]: select demovo0_.id as id1_0_0_, demovo0_.name as name2_0_0_ from demo_tbl demovo0_ where demovo0_.id=?
+2020-11-17 11:23:33 [task-1] DEBUG org.hibernate.loader.Loader ---
+				Static select for action ACTION_MERGE on entity com.example.demoJPA_1116.domain.DemoVO: select demovo0_.id as id1_0_0_, demovo0_.name as name2_0_0_ from demo_tbl demovo0_ where demovo0_.id=?
+2020-11-17 11:23:33 [task-1] DEBUG org.hibernate.loader.Loader ---
+				Static select for action ACTION_REFRESH on entity com.example.demoJPA_1116.domain.DemoVO: select demovo0_.id as id1_0_0_, demovo0_.name as name2_0_0_ from demo_tbl demovo0_ where demovo0_.id=?

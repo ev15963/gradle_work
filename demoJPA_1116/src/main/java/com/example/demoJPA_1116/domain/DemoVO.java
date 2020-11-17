@@ -14,6 +14,12 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
+/**
+ * 
+ * @author 
+ * 회원아이디
+ *
+ */
 @Entity //pom 점검도구
 @Table(name = "demo_tbl")
 @Data

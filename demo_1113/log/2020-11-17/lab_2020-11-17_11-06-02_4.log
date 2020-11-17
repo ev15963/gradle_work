@@ -40,3 +40,95 @@
 				Completed initialization in 10 ms
 2020-11-17 11:06:08 [http-nio-8181-exec-1] INFO  o.s.web.servlet.DispatcherServlet ---
 				Completed initialization in 10 ms
+2020-11-17 11:06:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:06:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:07:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:07:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:07:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:07:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:08:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:08:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:08:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:08:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:09:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:09:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:09:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:09:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:10:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:10:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:10:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:10:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:11:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:11:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:11:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:11:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:12:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:12:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:12:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:12:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:13:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:13:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:13:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:13:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:14:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:14:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:14:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:14:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:15:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:15:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:15:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:15:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:16:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:16:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:16:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:16:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:17:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:17:06 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2020-11-17 11:17:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:17:36 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-1 - Fill pool skipped, pool is at sufficient level.

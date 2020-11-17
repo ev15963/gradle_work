@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>template</title>
+</head>
+<body>
+
+<div th:insert="~{header::header}"></div>
+<div th:insert="~{content::content}"></div>
+<div th:insert="~{footer::footer}"></div>
+
+	<!-- header.html의 내용 읽어옴 -->
+	<!-- content.html의 내용 읽어옴 -->
+	<!-- footer.html의 내용 읽어옴 -->
+
+</body>
+</html>

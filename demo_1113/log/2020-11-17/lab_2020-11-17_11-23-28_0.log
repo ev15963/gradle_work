@@ -1,0 +1,151 @@
+2020-11-17 11:23:28 [Catalina-utility-2] INFO  c.e.demoJPA_1116.ServletInitializer ---
+				Starting ServletInitializer on DESKTOP-9GC530A with PID 6428 (J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\demoJPA_1116\WEB-INF\classes started by admin in C:\spring-tool-suite-4-4.8.1\sts-4.8.1.RELEASE)
+2020-11-17 11:23:28 [Catalina-utility-2] DEBUG c.e.demoJPA_1116.ServletInitializer ---
+				Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-11-17 11:23:28 [Catalina-utility-2] INFO  c.e.demoJPA_1116.ServletInitializer ---
+				No active profile set, falling back to default profiles: default
+2020-11-17 11:23:28 [Catalina-utility-2] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ---
+				For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-17 11:23:28 [Catalina-utility-2] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ---
+				For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-17 11:23:29 [Catalina-utility-2] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ---
+				Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 11:23:29 [Catalina-utility-2] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ---
+				Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-17 11:23:29 [Catalina-utility-2] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ---
+				Finished Spring Data repository scanning in 83ms. Found 1 JPA repository interfaces.
+2020-11-17 11:23:29 [Catalina-utility-2] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ---
+				Finished Spring Data repository scanning in 83ms. Found 1 JPA repository interfaces.
+2020-11-17 11:23:30 [Catalina-utility-2] INFO  o.a.c.c.C.[Catalina].[localhost].[/] ---
+				Initializing Spring embedded WebApplicationContext
+2020-11-17 11:23:30 [Catalina-utility-2] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ---
+				Root WebApplicationContext: initialization completed in 1595 ms
+2020-11-17 11:23:30 [Catalina-utility-2] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ---
+				Root WebApplicationContext: initialization completed in 1595 ms
+2020-11-17 11:23:30 [Catalina-utility-2] DEBUG com.zaxxer.hikari.HikariConfig ---
+				Driver class oracle.jdbc.OracleDriver found in Thread context class loader ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@6a2bcfcb
+
+2020-11-17 11:23:30 [Catalina-utility-2] DEBUG org.jboss.logging ---
+				Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2020-11-17 11:23:30 [Catalina-utility-2] INFO  o.s.s.c.ThreadPoolTaskExecutor ---
+				Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 11:23:30 [Catalina-utility-2] INFO  o.s.s.c.ThreadPoolTaskExecutor ---
+				Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-17 11:23:30 [task-1] DEBUG o.h.jpa.internal.util.LogHelper ---
+				PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@6a2bcfcb
+
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/J:/student/lsw/works/gradle_work/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/demoJPA_1116/WEB-INF/classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.example.demoJPA_1116.domain.DemoVO]
+	Mapping files names []
+	Properties []
+2020-11-17 11:23:30 [task-1] DEBUG o.h.i.internal.IntegratorServiceImpl ---
+				Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2020-11-17 11:23:30 [task-1] DEBUG o.h.i.internal.IntegratorServiceImpl ---
+				Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2020-11-17 11:23:30 [task-1] DEBUG o.h.i.internal.IntegratorServiceImpl ---
+				Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2020-11-17 11:23:30 [task-1] INFO  org.hibernate.Version ---
+				HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-11-17 11:23:30 [task-1] DEBUG org.hibernate.cfg.Environment ---
+				HHH000206: hibernate.properties not found
+2020-11-17 11:23:30 [Catalina-utility-2] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ---
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 11:23:30 [Catalina-utility-2] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ---
+				spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-17 11:23:30 [task-1] DEBUG o.h.service.spi.ServiceBinding ---
+				Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2020-11-17 11:23:31 [task-1] DEBUG o.h.c.i.RegionFactoryInitiator ---
+				Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2020-11-17 11:23:31 [task-1] DEBUG o.h.c.i.RegionFactoryInitiator ---
+				Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2020-11-17 11:23:31 [task-1] INFO  o.h.annotations.common.Version ---
+				HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration boolean -> org.hibernate.type.BooleanType@1857106
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration boolean -> org.hibernate.type.BooleanType@1857106
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1857106
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@44ce9bf
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration true_false -> org.hibernate.type.TrueFalseType@bbd3cad
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration yes_no -> org.hibernate.type.YesNoType@5312a69c
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration byte -> org.hibernate.type.ByteType@4f447b51
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration byte -> org.hibernate.type.ByteType@4f447b51
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4f447b51
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration character -> org.hibernate.type.CharacterType@16df3a11
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration char -> org.hibernate.type.CharacterType@16df3a11
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@16df3a11
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration short -> org.hibernate.type.ShortType@49496be4
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration short -> org.hibernate.type.ShortType@49496be4
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Short -> org.hibernate.type.ShortType@49496be4
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration integer -> org.hibernate.type.IntegerType@51f3f86c
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration int -> org.hibernate.type.IntegerType@51f3f86c
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@51f3f86c
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration long -> org.hibernate.type.LongType@36cd0be4
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration long -> org.hibernate.type.LongType@36cd0be4
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Long -> org.hibernate.type.LongType@36cd0be4
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration float -> org.hibernate.type.FloatType@4e9b0e3c
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration float -> org.hibernate.type.FloatType@4e9b0e3c
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4e9b0e3c
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration double -> org.hibernate.type.DoubleType@e489009
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration double -> org.hibernate.type.DoubleType@e489009
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@e489009
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@766fdca0
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@766fdca0
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration big_integer -> org.hibernate.type.BigIntegerType@4d62f045
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@4d62f045
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration string -> org.hibernate.type.StringType@61127df8
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.String -> org.hibernate.type.StringType@61127df8
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1d94d155
+2020-11-17 11:23:31 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@61ccf3f2
