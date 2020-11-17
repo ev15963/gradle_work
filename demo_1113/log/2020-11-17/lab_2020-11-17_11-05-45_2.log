@@ -1,0 +1,186 @@
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@52ed9c12
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1e9df352
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@12411f2d
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration serializable -> org.hibernate.type.SerializableType@3092abea
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration object -> org.hibernate.type.ObjectType@45147f94
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@45147f94
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6f56faa2
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4388b48c
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@44b8fa7
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4b3afdb0
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@13e19d9f
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@15cb67bb
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4da5e412
+2020-11-17 11:05:48 [task-1] DEBUG org.hibernate.type.BasicTypeRegistry ---
+				Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@51ee476b
+2020-11-17 11:05:48 [task-1] DEBUG o.h.b.internal.BootstrapContextImpl ---
+				Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ee1393] into BootstrapContext; was [null]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.b.internal.ClassLoaderAccessImpl ---
+				ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ee1393) [was null]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.b.internal.BootstrapContextImpl ---
+				Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@6fb6ab24] into BootstrapContext; was [null]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.b.internal.BootstrapContextImpl ---
+				Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@264dc872] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@6c5a83cf]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.b.internal.BootstrapContextImpl ---
+				Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ee1393]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.b.internal.ClassLoaderAccessImpl ---
+				ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ee1393]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory ---
+				Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				HikariPool-4 - configuration:
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				allowPoolSuspension.............false
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				autoCommit......................true
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				catalog.........................none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				connectionInitSql...............none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				connectionTestQuery.............none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				connectionTimeout...............30000
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				dataSource......................none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				dataSourceClassName.............none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				dataSourceJNDI..................none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				dataSourceProperties............{password=<masked>}
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				driverClassName................."oracle.jdbc.OracleDriver"
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				exceptionOverrideClassName......none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				healthCheckProperties...........{}
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				healthCheckRegistry.............none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				idleTimeout.....................600000
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				initializationFailTimeout.......1
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				isolateInternalQueries..........false
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				jdbcUrl.........................jdbc:oracle:thin:@localhost:1521:xe
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				leakDetectionThreshold..........0
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				maxLifetime.....................1800000
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				maximumPoolSize.................10
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				metricRegistry..................none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				metricsTrackerFactory...........none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				minimumIdle.....................10
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				password........................<masked>
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				poolName........................"HikariPool-4"
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				readOnly........................false
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				registerMbeans..................false
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				scheduledExecutor...............none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				schema..........................none
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				threadFactory...................internal
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				transactionIsolation............default
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				username........................"java"
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.HikariConfig ---
+				validationTimeout...............5000
+2020-11-17 11:05:48 [task-1] INFO  com.zaxxer.hikari.HikariDataSource ---
+				HikariPool-4 - Starting...
+2020-11-17 11:05:48 [Catalina-utility-2] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Triggering deferred initialization of Spring Data repositories…
+2020-11-17 11:05:48 [Catalina-utility-2] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Triggering deferred initialization of Spring Data repositories…
+2020-11-17 11:05:48 [task-1] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@56cfd7c9
+2020-11-17 11:05:48 [task-1] INFO  com.zaxxer.hikari.HikariDataSource ---
+				HikariPool-4 - Start completed.
+2020-11-17 11:05:48 [task-1] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator ---
+				Database ->
+       name : Oracle
+    version : Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+      major : 11
+      minor : 2
+2020-11-17 11:05:48 [task-1] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator ---
+				Driver ->
+       name : Oracle JDBC driver
+    version : 19.3.0.0.0
+      major : 19
+      minor : 3
+2020-11-17 11:05:48 [task-1] DEBUG o.h.e.j.e.i.JdbcEnvironmentInitiator ---
+				JDBC version : 4.2
+2020-11-17 11:05:48 [task-1] INFO  org.hibernate.dialect.Dialect ---
+				HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-11-17 11:05:48 [HikariPool-4 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Pool stats (total=1, active=1, idle=0, waiting=0)
+2020-11-17 11:05:48 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@1d4aae25
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@2512d1c6
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@5d6e53b6
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@ff721fd
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@466a5ae7
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@e58259e
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@41a00c92
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@618e432
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@5cc29288
+2020-11-17 11:05:49 [HikariPool-4 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-4 - After adding stats (total=10, active=1, idle=9, waiting=0)

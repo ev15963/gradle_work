@@ -1,0 +1,30 @@
+2020-11-17 11:05:50 [task-1] INFO  o.h.t.s.internal.SchemaCreatorImpl ---
+				HHH000476: Executing import script 'file:/J:/student/lsw/works/gradle_work/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/demoJPA_1116/WEB-INF/classes/import.sql'
+2020-11-17 11:05:50 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator ---
+				HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 11:05:50 [task-1] DEBUG o.h.query.spi.NamedQueryRepository ---
+				Checking 0 named HQL queries
+2020-11-17 11:05:50 [task-1] DEBUG o.h.query.spi.NamedQueryRepository ---
+				Checking 0 named SQL queries
+2020-11-17 11:05:50 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@2839d4d0
+2020-11-17 11:05:50 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Registering SessionFactory: 759e7840-0fef-4e2b-b139-9aabd5111966 (<unnamed>)
+2020-11-17 11:05:50 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Not binding SessionFactory to JNDI, no JNDI name configured
+2020-11-17 11:05:50 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:05:50 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:05:50 [Catalina-utility-2] DEBUG o.h.s.internal.StatisticsInitiator ---
+				Statistics initialized [enabled=false]
+2020-11-17 11:05:50 [Catalina-utility-2] DEBUG o.h.e.t.internal.TransactionImpl ---
+				On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2020-11-17 11:05:50 [Catalina-utility-2] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Spring Data repositories initialized!
+2020-11-17 11:05:50 [Catalina-utility-2] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Spring Data repositories initialized!
+2020-11-17 11:05:50 [Catalina-utility-2] INFO  c.e.demoJPA_1116.ServletInitializer ---
+				Started ServletInitializer in 5.801 seconds (JVM running for 189.429)
+2020-11-17 11:05:50 [Catalina-utility-2] INFO  o.a.catalina.core.StandardContext ---
+				이름이 []인 컨텍스트를 다시 로드하는 것을 완료했습니다.

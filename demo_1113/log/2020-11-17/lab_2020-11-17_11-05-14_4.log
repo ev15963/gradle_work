@@ -1,0 +1,78 @@
+2020-11-17 11:05:18 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator ---
+				HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 11:05:18 [task-1] DEBUG o.h.query.spi.NamedQueryRepository ---
+				Checking 0 named HQL queries
+2020-11-17 11:05:18 [task-1] DEBUG o.h.query.spi.NamedQueryRepository ---
+				Checking 0 named SQL queries
+2020-11-17 11:05:18 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@20a315f1
+2020-11-17 11:05:18 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Registering SessionFactory: 92739091-6b1e-43d2-b70d-b372670dacee (<unnamed>)
+2020-11-17 11:05:18 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Not binding SessionFactory to JNDI, no JNDI name configured
+2020-11-17 11:05:18 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:05:18 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:05:19 [Catalina-utility-1] DEBUG o.h.s.internal.StatisticsInitiator ---
+				Statistics initialized [enabled=false]
+2020-11-17 11:05:19 [Catalina-utility-1] DEBUG o.h.e.t.internal.TransactionImpl ---
+				On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2020-11-17 11:05:19 [Catalina-utility-1] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Spring Data repositories initialized!
+2020-11-17 11:05:19 [Catalina-utility-1] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Spring Data repositories initialized!
+2020-11-17 11:05:19 [Catalina-utility-1] INFO  c.e.demoJPA_1116.ServletInitializer ---
+				Started ServletInitializer in 5.741 seconds (JVM running for 157.868)
+2020-11-17 11:05:19 [Catalina-utility-1] INFO  o.a.catalina.core.StandardContext ---
+				이름이 []인 컨텍스트를 다시 로드하는 것을 완료했습니다.
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  o.a.catalina.core.StandardContext ---
+				이름이 []인 컨텍스트를 다시 로드하는 작업이 시작되었습니다.
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  o.a.c.c.C.[Catalina].[localhost].[/] ---
+				Closing Spring root WebApplicationContext
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:05:42 [Catalina-utility-2] DEBUG o.h.internal.SessionFactoryImpl ---
+				HHH000031: Closing
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl ---
+				HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-17 11:05:42 [Catalina-utility-2] DEBUG o.h.type.spi.TypeConfiguration$Scope ---
+				Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@14f8a17b] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@279defd1]
+2020-11-17 11:05:42 [Catalina-utility-2] DEBUG o.h.s.i.AbstractServiceRegistryImpl ---
+				Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2020-11-17 11:05:42 [Catalina-utility-2] DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl ---
+				Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  o.s.s.c.ThreadPoolTaskExecutor ---
+				Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  o.s.s.c.ThreadPoolTaskExecutor ---
+				Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  com.zaxxer.hikari.HikariDataSource ---
+				HikariPool-3 - Shutdown initiated...
+2020-11-17 11:05:42 [Catalina-utility-2] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-3 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@1f7b5a2e: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@123918b0: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@383bc1a9: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@40482f0c: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@55fb5481: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@5b4c2136: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@3835a767: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@322e34f3: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@3d584312: (connection evicted)
+2020-11-17 11:05:42 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase ---
+				HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@794e3c79: (connection evicted)
+2020-11-17 11:05:42 [Catalina-utility-2] DEBUG com.zaxxer.hikari.pool.HikariPool ---
+				HikariPool-3 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2020-11-17 11:05:42 [Catalina-utility-2] INFO  com.zaxxer.hikari.HikariDataSource ---
+				HikariPool-3 - Shutdown completed.

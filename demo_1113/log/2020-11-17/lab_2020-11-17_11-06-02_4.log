@@ -1,0 +1,42 @@
+2020-11-17 11:06:08 [task-1] INFO  o.h.t.s.internal.SchemaCreatorImpl ---
+				HHH000476: Executing import script 'file:/J:/student/lsw/works/gradle_work/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/demoJPA_1116/WEB-INF/classes/import.sql'
+2020-11-17 11:06:08 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator ---
+				HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-17 11:06:08 [task-1] DEBUG o.h.query.spi.NamedQueryRepository ---
+				Checking 0 named HQL queries
+2020-11-17 11:06:08 [task-1] DEBUG o.h.query.spi.NamedQueryRepository ---
+				Checking 0 named SQL queries
+2020-11-17 11:06:08 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@62d2655f
+2020-11-17 11:06:08 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Registering SessionFactory: 33fef623-4d07-41e3-b756-0f3a5e557afc (<unnamed>)
+2020-11-17 11:06:08 [task-1] DEBUG o.h.internal.SessionFactoryRegistry ---
+				Not binding SessionFactory to JNDI, no JNDI name configured
+2020-11-17 11:06:08 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:06:08 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ---
+				Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-17 11:06:08 [main] DEBUG o.h.s.internal.StatisticsInitiator ---
+				Statistics initialized [enabled=false]
+2020-11-17 11:06:08 [main] DEBUG o.h.e.t.internal.TransactionImpl ---
+				On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2020-11-17 11:06:08 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Spring Data repositories initialized!
+2020-11-17 11:06:08 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener ---
+				Spring Data repositories initialized!
+2020-11-17 11:06:08 [main] INFO  c.e.demoJPA_1116.ServletInitializer ---
+				Started ServletInitializer in 6.619 seconds (JVM running for 11.182)
+2020-11-17 11:06:08 [main] INFO  o.a.coyote.http11.Http11NioProtocol ---
+				프로토콜 핸들러 ["http-nio-8181"]을(를) 시작합니다.
+2020-11-17 11:06:08 [main] INFO  org.apache.catalina.startup.Catalina ---
+				서버가 [10220] 밀리초 내에 시작되었습니다.
+2020-11-17 11:06:08 [http-nio-8181-exec-1] INFO  o.a.c.c.C.[Catalina].[localhost].[/] ---
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-17 11:06:08 [http-nio-8181-exec-1] INFO  o.s.web.servlet.DispatcherServlet ---
+				Initializing Servlet 'dispatcherServlet'
+2020-11-17 11:06:08 [http-nio-8181-exec-1] INFO  o.s.web.servlet.DispatcherServlet ---
+				Initializing Servlet 'dispatcherServlet'
+2020-11-17 11:06:08 [http-nio-8181-exec-1] INFO  o.s.web.servlet.DispatcherServlet ---
+				Completed initialization in 10 ms
+2020-11-17 11:06:08 [http-nio-8181-exec-1] INFO  o.s.web.servlet.DispatcherServlet ---
+				Completed initialization in 10 ms
