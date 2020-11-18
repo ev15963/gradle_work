@@ -22,4 +22,8 @@
         </mruHistory>
         <favorites/>
     </launchGroup>
+    <launchGroup id="org.jkiss.dbeaver.debug.launchGroup">
+        <mruHistory/>
+        <favorites/>
+    </launchGroup>
 </launchHistory>
