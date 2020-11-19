@@ -2139,3 +2139,65 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.IPath.to
 2020-11-19 16:50:25,933 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-11-19 16:50:25,935 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-11-19 16:50:25,935 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory J:\student\lsw\works\gradle_work\SpringJsonFeed_1118\src\test\resources
+2020-11-19 17:17:44,532 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-19 17:17:48,657 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.javateam:SpringJsonFeed_1118:1.0 @ J:\student\lsw\works\gradle_work\SpringJsonFeed_1118\pom.xml.
+2020-11-19 17:17:53,160 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-19 17:17:53,164 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-19 17:17:53,181 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-19 17:17:53,184 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-19 17:17:53,184 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory J:\student\lsw\works\gradle_work\SpringJsonFeed_1118\src\test\resources
+2020-11-19 17:17:54,373 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-19 17:17:54,375 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-19 17:17:54,376 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-19 17:17:54,379 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-19 17:17:54,379 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory J:\student\lsw\works\gradle_work\SpringJsonFeed_1118\src\test\resources
+2020-11-19 17:23:19,671 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.javateam:springJsonXmlFeed:1.0 @ J:\student\lsw\works\gradle_work\SpringJsonFeed\pom.xml.
+2020-11-19 17:23:21,864 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.pom
+2020-11-19 17:23:22,749 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.pom
+2020-11-19 17:23:23,059 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.pom
+2020-11-19 17:23:23,982 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/net/bytebuddy/byte-buddy-parent/1.10.5/byte-buddy-parent-1.10.5.pom
+2020-11-19 17:23:24,121 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.5/byte-buddy-parent-1.10.5.pom
+2020-11-19 17:23:24,324 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.10.5/byte-buddy-parent-1.10.5.pom
+2020-11-19 17:23:25,116 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.pom
+2020-11-19 17:23:25,275 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.pom
+2020-11-19 17:23:25,429 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.pom
+2020-11-19 17:23:26,034 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.pom
+2020-11-19 17:23:26,174 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.pom
+2020-11-19 17:23:26,325 [Worker-11: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.pom
+2020-11-19 17:23:27,045 [AetherRepositoryConnector-maven.java.net-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar
+2020-11-19 17:23:27,690 [AetherRepositoryConnector-maven.java.net-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.jar
+2020-11-19 17:23:27,691 [AetherRepositoryConnector-maven.java.net-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.jar
+2020-11-19 17:23:27,860 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar
+2020-11-19 17:23:27,877 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.jar
+2020-11-19 17:23:28,048 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.jar
+2020-11-19 17:23:28,138 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar
+2020-11-19 17:23:28,666 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.jar
+2020-11-19 17:23:29,193 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.jar
+2020-11-19 17:23:30,877 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:23:30,883 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-19 17:23:30,892 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:23:30,899 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-19 17:23:33,243 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5-sources.jar
+2020-11-19 17:23:33,926 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5-sources.jar
+2020-11-19 17:23:34,977 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5-sources.jar
+2020-11-19 17:23:35,092 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.bytebuddy:byte-buddy:1.10.5
+2020-11-19 17:23:36,171 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5-sources.jar
+2020-11-19 17:23:36,410 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:23:36,420 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-19 17:23:36,424 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:23:36,432 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-19 17:23:36,842 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5-sources.jar
+2020-11-19 17:23:37,412 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5-sources.jar
+2020-11-19 17:23:37,537 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.bytebuddy:byte-buddy-agent:1.10.5
+2020-11-19 17:23:38,610 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.java.net/content/repositories/releases/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2-sources.jar
+2020-11-19 17:23:39,304 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2-sources.jar
+2020-11-19 17:23:39,670 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2-sources.jar
+2020-11-19 17:23:39,797 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hamcrest:hamcrest-library:2.2
+2020-11-19 17:23:40,097 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:23:40,103 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-19 17:23:40,104 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:23:40,111 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-19 17:52:31,953 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:52:31,959 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-19 17:52:31,960 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-19 17:52:31,966 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
