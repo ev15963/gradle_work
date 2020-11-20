@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>getAll</title>
+</head>
+<body>
+ 
+    <table>
+        <tr>
+            <td>id</td>
+            <td>first name</td>
+            <td>last name</td>
+            <td>email</td>
+            <td>phone</td>
+            <td>hire date</td>
+            <td>job id</td>
+            <td>salary</td>
+            <td>commission pct</td>
+            <td>manager id</td>
+            <td>department id</td>
+        </tr>
+       
+        <tr th:each="emp : ${list}">
+            <td th:text="${emp.employeeId}"></td>
+            <td th:text="${emp.firstName}"></td>
+            <td th:text="${emp.lastName}"></td>
+            <td th:text="${emp.email}"></td>
+            <td th:text="${emp.phoneNumber}"></td>
+            <td th:text="${emp.hireDate}"></td>
+            <td th:text="${emp.jobId}"></td>
+            <td th:text="${emp.salary}"></td>
+            <td th:text="${emp.commissionPct}"></td>
+            <td th:text="${emp.managerId}"></td>
+            <td th:text="${emp.departmentId}"></td>
+        </tr>
+    </table>
+   
+</body>
+</html>
