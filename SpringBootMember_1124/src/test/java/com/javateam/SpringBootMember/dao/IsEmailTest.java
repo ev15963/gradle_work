@@ -23,7 +23,13 @@ class IsEmailTest {
 		email = "fsd@naver.com";
 		id = "dddd123456";
 	}
-
+	/**
+	 * 
+	 * id, email를 비교하는 테스트
+	 * isEnableEmail : 쓸 수 있는 이메일인가
+	 * 계정이 있는지 점검하기
+	 * 기대값 true
+	 * */
 	@Test
 	void test() {
 		assertTrue(memberDao.isEnableEmail(id, email));
