@@ -8,7 +8,7 @@
     </appender>
     
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>k:\\log\\labatory_demoSpringbooSecurity.log</file>
+        <file>J:\log\labatory_demoSpringbooSecurity_1124.log</file>
        
         <!-- 
         <encoder>
@@ -23,7 +23,7 @@
         -->
         
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>k:\\log\\labatory_demoSpringbooSecurity.%d{yyyy-MM-dd HH:mm:ss}.log</fileNamePattern>
+            <fileNamePattern>j:\log\labatory_demoSpringbooSecurity_1124.%d{yyyy-MM-dd HH:mm:ss}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
  
