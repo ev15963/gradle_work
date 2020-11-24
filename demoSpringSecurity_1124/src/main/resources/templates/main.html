@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8" />
+<title>Main</title>
+</head>
+<body>
+    <span sec:authentication="name"></span>
+    <span sec:authentication="principal.authorities"></span> 
+ 
+    <div sec:authorize="hasAuthority('ADMIN')">- 관리자 등급</div>
+    <div sec:authorize="hasAuthority('USER')">- 일반 사용자 등급</div>
+ 
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out" />
+    </form>
+    
+    <a th:attr="href=@{/admin}">관리자</a>
+    <a th:attr="href=@{/user}">일반 사용자</a>
+</body>
+</html>

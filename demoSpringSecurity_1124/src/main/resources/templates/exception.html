@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+</head>
+<body>
+<script th:inline="javascript">
+// 주의사항 : "/**/" 에 요소를 넝을 경우 "/**/"와의 사이 간격을 띄우면 안됩니다. 
+// ex) /* [[${#httpServletRequest.getContextPath()}]] */ (X)
+// ex) /*[[${#httpServletRequest.getContextPath()}]]*/ (O)
+/*<![CDATA[*/  
+alert([[${err_msg}]]);
+var ctxPath = /*[[${#httpServletRequest.getContextPath()}]]*/; 
+// alert(ctxPath);
+location.href = ctxPath + "/login"; 
+/*]]>*/
+</script>
+</body>
+</html>

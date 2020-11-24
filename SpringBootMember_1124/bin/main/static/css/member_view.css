@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* 전체 개별 회원정보 조회 레이어/테이블 레이아웃  */
+div#wrap {
+    width:1000px;	
+	font-size:1.2em;
+	font-family:Nanum Gothic;
+}
+
+div.viewFormPnl {
+	width:100%;
+}
+  
+table#viewFormTbl {  
+    width:100%;
+}  
+
+/* 테이블의 개별 셀(cell) */
+table#viewFormTbl td {
+	padding:15px;
+}
+
+/* 입력 필드 표제셀 */
+/* 
+	아이디가 viewFormTbl인 테이블 소속의 홀수줄(tr)의
+	배경색을 #94E3F6로 적용합니다. 
+*/
+table#viewFormTbl tr:nth-child(2n+1) {
+	background-color:#94E3F6;
+}
+
+/* 
+	아이디가 viewFormTbl인 테이블 소속의 짝수줄(tr)의 
+	배경색을 #94EAF6로 적용합니다. 
+*/
+table#viewFormTbl tr:nth-child(2n) {
+	background-color:#94EAF6;
+}
+
+/* 입력 필드 표제셀 */
+table#viewFormTbl td:nth-child(2n+1) {
+	width:200px;
+	font-weight:bold;
+	letter-spacing:2px;
+}
+
+/* 입력 필드셀 */
+/* 
+	아이디가 viewFormTbl인 테이블 소속의 짝수번째의 셀(td)의 
+	배경색을 #C8F3FA로 적용합니다. 
+*/
+table#viewFormTbl td:nth-child(2n) {	
+	background-color:#C8F3FA;
+}
+
+/* 폼필드(각종 입력 필드)들 외곽선 효과 */
+/*
+	외곽선 : 1px 실선 #999
+	글꼴 크기 : 1.2em
+	내부간격 : 5px
+*/
+input[type='text'], input[type='password'] {
+	border:1px solid #999;
+	font-size:1.2em;
+	padding:5px;
+}
+
+/* 주소 필드 */
+input[id^=memberAddress] {
+	width:600px;
+}
+
+/* 입력 필드 표제 필수 항목 "*" */
+.requiredFld {
+	color:red;
+}

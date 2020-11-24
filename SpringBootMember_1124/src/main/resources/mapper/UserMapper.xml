@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper	namespace="mapper.UserMapper">
+	
+	<select id="getUserByUsername" 
+			resultType="com.javateam.SpringBootMember.domain.Users"
+			parameterType="String">
+		SELECT * FROM users 
+		WHERE username = #{username}
+	</select>
+	
+	<select id="hasUsername" 
+			resultType="int"
+			parameterType="String">
+		SELECT count(*) FROM user
+		WHERE username = #{username}
+	</select>
+	
+	<select id="getUserRolesByUsername" 
+			resultType="com.javateam.SpringBootMember.domain.Users"
+			parameterType="String">
+		SELECT * FROM user_roles 
+		WHERE username = #{username}
+	</select>
+	
+	<insert id="insertUser" 
+			parameterType="com.javateam.SpringBootMember.domain.Users">
+		INSERT INTO users VALUES 
+		(#{username}, #{password}, #{enabled})			
+	</insert>
+	
+	<insert id="insertUserRoles" parameterType="hashMap">
+		INSERT INTO user_roles VALUES 
+		(user_roles_seq.nextval, #{username}, #{role})
+	</insert>	
+	
+	<select id="loadUserByUsername" 
+			parameterType="String" 
+			resultType="com.javateam.SpringBootMember.domain.Users">
+		SELECT * FROM users WHERE username=#{username}
+	</select>
+	
+	<select id="loadUserRole" 
+			parameterType="String" 
+			resultType="com.javateam.SpringBootMember.domain.Role">
+		SELECT username, role FROM user_roles WHERE username=#{username}
+	</select>
+	
+	<!-- 회원 정보 수정 -->
+	<update id="updateUser">
+		UPDATE users SET password=#{password}
+		WHERE username=#{username}
+	</update>
+	
+	<!-- 회원 정보 삭제 -->
+	<!-- 삭제시 테이블 순서에 유의해야 됩니다 -->
+	<delete id="deleteUser" parameterType="String">
+		{call
+	        declare
+	        begin
+		        DELETE user_roles WHERE username=#{username};
+	            DELETE users WHERE username=#{username};
+	        end
+	    }
+	</delete>
+	
+</mapper>

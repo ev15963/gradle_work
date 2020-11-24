@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" monitorInterval="30">
+
+	<Properties>
+		<Property name="LOG_FORMAT">%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Property>
+		<Property name="LOG_PATH">J:/log/SpringBootMember_1124</Property>
+	</Properties>
+
+	<Appenders>
+	
+		<Console name="Console" target="SYSTEM_OUT" follow="true">
+			<PatternLayout pattern="${LOG_FORMAT}" />
+		</Console>
+
+		<!-- fileName="${LOG_PATH}/SpringBootMember.log" -->
+		<!-- <RollingFile name="File"
+			filePattern="${LOG_PATH}/SpringBootMember.%d{yyyyMMdd}_%i.log">
+			<PatternLayout pattern="${LOG_FORMAT}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+
+			<DefaultRolloverStrategy>
+				<Delete basePath="${LOG_PATH}">
+					<IfFileName glob="*.log" />
+					<IfLastModified age="30d" /> 30일 이후면 소거
+				</Delete>
+			</DefaultRolloverStrategy>
+
+		</RollingFile> -->
+		
+	</Appenders>
+
+	<Loggers>
+	
+		<Root level="debug">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Root>
+		
+	</Loggers>
+
+</Configuration>

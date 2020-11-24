@@ -1,4 +1,5 @@
 #Tomcat publish data
-#Fri Nov 20 20:58:39 KST 2020
+#Tue Nov 24 17:19:58 KST 2020
+org.eclipse.jst.j2ee.server\:/binary\:J\:\\student\\lsw\\repo\\gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.2.8.RELEASE\\4f9542d61fff7beb6050e8028dfb6b7c6844c99a\\spring-web-5.2.8.RELEASE.jar=WEB-INF/lib/spring-web-5.2.8.RELEASE.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\4.3.29.RELEASE\\spring-web-4.3.29.RELEASE.jar=WEB-INF/lib/spring-web-4.3.29.RELEASE.jar
 org.eclipse.jst.j2ee.server\:/binary\:J\:\\student\\lsw\\repo\\gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.2.11.RELEASE\\fc5925a30ddae07f9c17a5069f11a2001cbd9af5\\spring-web-5.2.11.RELEASE.jar=WEB-INF/lib/spring-web-5.2.11.RELEASE.jar

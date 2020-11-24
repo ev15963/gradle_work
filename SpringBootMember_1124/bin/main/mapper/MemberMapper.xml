@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.MemberMapper">
+
+	<select id="isMember" parameterType="String" resultType="int">
+		SELECT count(*) FROM member_tbl
+		WHERE member_id=#{memberId}
+	</select>
+	
+	<select id="isEnableEmail" parameterType="String" resultType="int">
+		SELECT count(*) FROM member_tbl
+		WHERE member_email=#{memberEmail}
+	</select>
+	
+	<select id="isEnablePhone" parameterType="String" resultType="int">
+		SELECT count(*) FROM member_tbl
+		WHERE member_phone=#{memberPhone}
+	</select>
+	
+	<!-- 회원정보 생성(삽입) -->
+	<insert id="insertMember" parameterType="com.javateam.SpringBootMember.domain.MemberVO">
+		INSERT INTO member_tbl VALUES 
+		(
+			#{memberId},
+			#{memberNickname},
+			#{memberName},
+			#{memberGender},
+			#{memberEmail},
+			#{memberPhone},
+			#{memberBirth},
+			#{memberZip},
+			nvl(#{memberAddress}, ''),
+			sysdate
+		)
+	</insert>
+	
+	<!-- 회원정보 조회 -->
+	<select id="getMember" parameterType="String" resultType="com.javateam.SpringBootMember.domain.MemberVO">
+		SELECT * FROM member_tbl
+		WHERE member_id=#{memberId}
+	</select>	
+	
+	<!-- 회원정보 수정-->
+	<update id="updateMember" parameterType="com.javateam.SpringBootMember.domain.MemberVO">
+		UPDATE member_tbl SET  
+			member_nickname=#{memberNickname},  
+			member_email=#{memberEmail}, 
+			member_phone=#{memberPhone}, 
+			member_zip=#{memberZip}, 
+			member_address=#{memberAddress}  
+		WHERE member_id=#{memberId}
+	</update>
+	
+	<!--  회원정보 삭제 -->
+	<delete id="deleteMember" parameterType="String">
+		DELETE member_tbl WHERE member_id=#{memberId}
+	</delete>
+	
+	<!-- 회원정보 수정시 이메일 중복 점검 -->
+	<select id="isEnableEmailUpdate" parameterType="hashMap" resultType="int">
+		SELECT count(*) FROM 
+		   (SELECT member_email FROM member_tbl 
+			  WHERE member_id != #{memberId}) 
+		WHERE member_email = #{email}
+	</select>
+	
+	<!-- 회원정보 수정시 전화번호 중복 점검 -->
+	<select id="isEnablePhoneUpdate" parameterType="hashMap" resultType="int">
+		SELECT count(*) FROM 
+			(SELECT member_phone FROM member_tbl 
+			 WHERE member_id != #{memberId}) 
+		WHERE member_phone = #{phone}
+	</select>
+	
+</mapper>

@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+/* 전체 회원가입 레이어/테이블 레이아웃  */
+div#join_wrap {
+    width:1000px;	
+	font-size:1.2em;
+	font-family:Nanum Gothic;
+}
+
+div.joinFormPnl {
+	width:100%;
+}
+  
+table#joinFormTbl {  
+    width:100%;
+}  
+
+/* 테이블의 개별 셀(cell) */
+table#joinFormTbl td {
+	padding:15px;
+}
+
+/* 입력 필드 표제셀 */
+/* 
+	아이디가 joinFormTbl인 테이블 소속의 홀수줄(tr)의
+	배경색을 #94E3F6로 적용합니다. 
+*/
+table#joinFormTbl tr:nth-child(2n+1) {
+/* 	background-color:#94E3F6; */
+}
+
+/* 
+	아이디가 joinFormTbl인 테이블 소속의 짝수줄(tr)의 
+	배경색을 #94EAF6로 적용합니다. 
+*/
+table#joinFormTbl tr:nth-child(2n) {
+/* 	background-color:#94EAF6; */
+}
+
+/* 입력 필드 표제셀 */
+table#joinFormTbl td:nth-child(2n+1) {
+	width:200px;
+	font-weight:bold;
+	letter-spacing:2px;
+}
+
+/* 입력 필드셀 */
+/* 
+	아이디가 joinFormTbl인 테이블 소속의 짝수번째의 셀(td)의 
+	배경색을 #C8F3FA로 적용합니다. 
+*/
+table#joinFormTbl td:nth-child(2n) {	
+/* 	background-color:#C8F3FA; */
+}
+
+
+/* 하단 메뉴(회원가입/취소) 테이블 */
+/*
+	너비 : 1000px
+	길이 : 100px
+	중앙정렬
+	내부간격 : 상하 10px
+*/
+table#joinFormMenu {
+	width:1000px;
+	height:100px;
+	text-align:center;
+	padding:10px 0;
+}
+
+/* 폼필드(각종 입력 필드)들 외곽선 효과 */
+/*
+	외곽선 : 1px 실선 #999
+	글꼴 크기 : 1.2em
+	내부간격 : 5px
+*/
+input[type='text'], input[type='password'] {
+	border:1px solid #999;
+	font-size:1.2em;
+	padding:5px;
+}
+
+/* 입력 필드 표제 필수 항목 "*" */
+.requiredFld {
+	color:red;
+}
+
+/* 회원가입/취소/주소검색 버튼  */
+/*
+	글꼴 크기 : 1em
+	글꼴 형태 : 굵게
+	글꼴색 : 흰색
+	너비 : 140px
+	높이 : 50px
+	배경색 : #00A2E8
+	외곽선색 : #60C5F1
+	외곽선굵기 : 3px
+	외곽선형태 : 실선
+	외곽선 곡면처리 : 10px
+	외부 간격 : 좌우 5px
+	자간 : 2px
+*/
+input[id^=join][id$=Btn] {    
+	font-size:1em;
+	font-weight:bold;
+	color:#fff;
+	width:140px;
+	height:50px;
+	background-color:#00A2E8;
+	border:3px solid #60C5F1;
+	border-radius:10px;
+	margin:0 5px;
+	letter-spacing:2px;	
+	transition: all .2s ease;
+}
+
+/*  추가 : 회원가입/취소/주소검색 버튼(roll over) */
+input[id^=join][id$=Btn]:hover {    
+	font-size:1em;
+	font-weight:900;
+	color:#C8FAF4;
+	width:140px;
+	height:50px;
+	background-color:#007DE8;
+	border:3px solid #60AEF1;
+	border-radius:10px;
+	margin:0 5px;
+	letter-spacing:2px;	
+}
+
+/* 
+
+/* 성별 필드 : 라디오 버튼 */
+ul#radio_gender li {
+	color:#000;
+	display:block;
+	position:relative;
+	float:left;
+	margin-top:-10px;
+	margin-left:-35px; 
+	/* margin-top:0px;
+	margin-left:-25px; */
+	letter-spacing:2px;
+	width:140px;	
+}
+
+ul#radio_gender li input[type=radio] {
+	position:absolute;
+	visibility:hidden;
+}
+
+ul#radio_gender li label {
+	display:block;
+	position:relative;
+	font-size:1.1em;
+	padding:0px 40px 10px 50px;
+	margin-bottom:10px;
+	height:20px;
+	z-index:9;
+	cursor:pointer;		
+	transition:all 0.25s linear;
+}
+
+ul#radio_gender li .check {
+	display:block;
+	position:absolute;
+	border:5px solid #94D8F6;
+	border-radius:100%;
+	height:25px;
+	width:25px; 
+	top:0px;
+	left:0px;
+	z-index:5;
+	transition:border 0.25s linear;
+}
+
+ul#radio_gender li .check::before {
+	display:block;
+	position:absolute;
+	content:'';
+	border-radius:100%;
+	height:15px;
+	width:15px;
+	top:5px;
+	left:5px;
+	margin:auto;
+	transition:background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+	border:5px solid #60C5F1;
+}
+
+input[type=radio]:checked ~ .check::before {
+	background:#00A2E8;
+}
+
+input[type=radio]:checked ~ label {
+	color:#000;
+}
+
+/* 폼점검 에러 메시지  */
+.err_msg { color:red; }
