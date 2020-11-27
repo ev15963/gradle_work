@@ -11,6 +11,12 @@ J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jsp
 \demoJPA\src\test\java
 J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1727977679.index
 \demo_1113\src\main\java
+J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2696044792.index
+\smartEditorBootDemo\src\main\java
+J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1337535238.index
+\smartEditorBootDemo_1127\src\main\java
+J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4214705716.index
+\SpringMediaDemo\src\main\java
 J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\655425684.index
 \springFormJPAValidation\src\main\java
 J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1872066423.index
@@ -43,5 +49,7 @@ J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jsp
 \SpringBootMember\src\main\java
 J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4135083996.index
 \SpringJsonFeed\src\main\java
+J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2132361504.index
+\SpringMediaDemo_1126\src\main\java
 J:\student\lsw\works\gradle_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4079982073.index
 \springFormJPAValidation_1119\src\main\java

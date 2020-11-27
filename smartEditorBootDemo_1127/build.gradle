@@ -1,0 +1,84 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.javateam'
+version = '1.0'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+ 
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'	
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.3'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+	annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	
+	// logback
+	implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    // log4jdbc
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+    implementation "org.logback-extensions:logback-ext-spring:0.1.2"
+	implementation files("${System.properties['java.home']}/../lib/tools.jar")
+	
+	////////////////////////////////////////////////////////////////////////////////////
+		
+	// jQuery
+    implementation group: 'org.webjars', name: 'jquery', version: '3.5.1'
+    
+    // jQueryUI
+    implementation 'org.webjars:jquery-ui:1.12.1'
+    
+    // bootstrap
+    implementation 'org.webjars:bootstrap:4.5.2'
+    
+    // popper.js
+    implementation 'org.webjars:popper.js:2.5.2'
+    
+    // angularJS
+    implementation 'org.webjars:angularjs:1.8.0'
+
+    // webjars javascript 자동 버전 관리
+    implementation group: 'org.webjars', name: 'webjars-locator', version: '0.40'
+	
+	////////////////////////////////////////////////////////////////////////////////////////
+	
+	// Naver Smart Editor를 위한 라이브러리 의존성 정보
+	implementation group: 'commons-codec', name: 'commons-codec', version: '1.9'
+	implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.3.1'
+	implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.9'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+	implementation group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.4'
+	implementation group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.3.5'
+	
+	// gradle/maven remote repo 에서 제공되지 않고 사용자가 직접 복사하여 장착한 라이브러리(jar) 정보를 읽어옴.   
+	// cos : fileupload (파일 업로드 라이브러리)
+	// cos : http://servlets.com/cos/, http://servlets.com/cos/cos-20.08.zip
+	// zip 파일 압축을 풀어서 cos.jar를 추출하여 libs 폴더를 작성하여 복사합니다.
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	
+}
+
+test {
+	useJUnitPlatform()
+}
