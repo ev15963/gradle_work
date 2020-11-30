@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>페이징</title>
+</head>
+<body>
+
+	<div th:fragment="paging" id="pageList" class="row">
+				
+		<!-- 페이징(paging) -->
+		<ul class="pagination">
+	
+			<!-- 주의) 이 부분에서 bootstrap 페이징 적용시 불가피하게 <a> 기입. <a>없으면 적용 안됨. -->
+			
+			<li th:if="${pageVO.page <= 1}" class="page-item">
+				<a class="page-link" th:href="@{'/board/boardList.do/1'}">이전</a>
+			</li>
+					
+			<li th:unless="${pageVO.page <= 1}" class="page-item">
+				<a class="page-link" th:href="@{'/board/boardList.do/'+ ${pageVO.page - 1}}">이전</a>
+			</li>
+	
+			<th:block th:each="a : ${#numbers.sequence(pageVO.startPage, pageVO.endPage)}">	
+			
+				<!-- 주의) 이 부분에서 bootstrap 페이징 적용시 불가피하게 <a> 기입. <a>없으면 적용 안됨. -->
+				<li th:if="${a == pageVO.page}" class="page-item active">
+					<a class="page-link" th:href="@{'/board/boardList.do/' + ${a}}">[[${a}]]</a>
+				</li>
+				
+				<li th:unless="${a == pageVO.page}" class="page-item">
+					<a class="page-link" th:href="@{'/board/boardList.do/'+ ${a}}">[[${a}]]</a>
+				</li>
+				
+			</th:block>	
+	
+			<li th:if="${pageVO.page >= pageVO.maxPage}" class="page-item">
+				<a class="page-link" th:href="@{'/board/boardList.do/' + ${pageVO.page}}">다음</a>
+			</li>
+			
+			<li th:unless="${pageVO.page >= pageVO.maxPage}" class="page-item">
+				<a class="page-link" th:href="@{'/board/boardList.do/' + ${pageVO.page + 1}}">다음</a>
+			</li>
+	
+		</ul>
+	
+	</div>
+
+</body>
+</html>

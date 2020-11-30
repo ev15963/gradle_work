@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>게시글 쓰기</title>
+</head>
+<body>
+
+	<!-- CK editor 4 -->
+	<script>
+	//$(function() { // 주의) jQuery 선언부 활성화시 에러 발생 !
+	//
+	// 중요) filebrowserUploadUrl 설정이 없으면 이미지 "업로드 버튼" 출력 안됨 !
+	// 
+	
+	// CKEDITOR.replace("boardContent", {
+	
+	//	filebrowserImageUploadUrl : "[[@{'/imageUploadCK5.do?type=Images'}]]"
+		// filebrowserUploadUrl      : "[[@{'/imageUploadCK5.do?type=Files'}]]"
+		// filebrowserUploadUrl : "[[@{'/imageUploadCK4.do?type=Files'}]]"
+	   	// filebrowserUploadUrl      : '/upload.do?type=Files',
+	// });  
+	
+	// CKFinder.setupCKEditor(editor);
+	
+	//});
+	</script> 
+
+
+	<!-- ng-controller="writeFormController" -->
+	<div th:fragment="writeModal" class="modal fade" id="writeModal" role="dialog">
+	
+		<div class="modal-dialog modal-lg">
+	
+			<!-- form -->
+			<form id="boardForm"
+				  name="boardForm"
+				  method="post" 
+				  enctype="multipart/form-data" 
+			      ng-model="boardForm"
+			      novalidate> 
+	
+				<div class="modal-content">
+				
+					<div class="modal-header">
+						<h4 class="modal-title">게시글 쓰기</h4>
+						<!-- 
+							플래그 : 글쓴이={{boardForm.boardName.$valid}}, 
+								   비밀번호={{boardForm.boardPass.$valid}},
+								   제목={{boardForm.boardSubject.$valid}},
+								   내용={{boardForm.boardContent.$valid}}<br>
+							
+							글내용 : {{boardContent}}
+						-->	   
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					
+					<div class="modal-body form-group">
+				
+						<!-- bootstrap table 적용 -->
+						<table class="table">
+			
+							<tr class="form-group">
+								<td class="col-xs-2">
+									<label for="boardName" class="control-label"> 
+										<span style="color: red">*</span>글쓴이
+									</label>
+								</td>
+								<td class="col-xs-10">
+									<input type="text" 
+									       id="boardName"
+										   name="boardName" 
+										   ng-model="boardName" 
+										   class="form-control" 
+										   title="게시글 작성자를  2~15자 이내로 입력하십시오"
+										   ng-maxlength="15" 
+										   ng-minlength="2" 
+										   required="true" 
+										   autocomplete="off"/>
+								</td>
+							</tr>
+			
+							<!-- 글쓴이 에러 메시징 시작 -->
+							<tr id="boardName_ERR" 
+								class="err_msg"
+								ng-show="boardForm.boardName.$error.maxlegnth || 
+										 boardForm.boardName.$error.minlength">
+								<td colspan="2" class="col-xs-12">게시글 작성자를 2~15자 이내로 입력하십시오</td>
+							</tr>
+							<!-- 글쓴이 에러 메시징 끝 -->
+			
+							<tr>
+								<td><label for="boardPass" class="control-label"> <span
+										style="color: red">*</span>비밀번호
+								</label></td>
+								<td>
+									<input type="password" 
+										   id="boardPass" 
+										   name="boardPass"
+										   ng-model="boardPass" 
+										   class="form-control"
+										   title="게시글 패쓰워드를 8~20자 이내로 입력하십시오" 
+										   ng-maxlength="20"
+										   ng-minlength="8" 
+										   required="true"
+										   autocomplete="off" />
+							    </td>
+							</tr>
+			
+							<!-- 패쓰워드 에러 메시징 시작 -->
+							<tr id="boardPass_ERR" class="err_msg"
+								ng-show="boardForm.boardPass.$error.maxlength || 
+										 boardForm.boardPass.$error.minlength">
+								<td colspan="2" class="col-xs-12">게시글 패쓰워드를 8~20자 이내로 입력하십시오</td>
+							</tr>
+							<!-- 패쓰워드 에러 메시징 끝 -->
+			
+							<tr>
+								<td><label for="boardSubject" class="control-label">
+										<span style="color: red">*</span>제 목
+								</label></td>
+								<td>
+									<input  type="text" 
+											id="boardSubject"
+											name="boardSubject"
+											class="form-control"
+											title="글제목은 2~50자이내로 적습니다" 
+											ng-model="boardSubject"
+											ng-maxlength="50" 
+											ng-minlength="2" 
+											required="true" 
+											autocomplete="off"/>
+								</td>
+							</tr>
+			
+							<!-- 게시글 제목 에러 메시징 시작 -->
+							<tr id="boardSubject_ERR" class="err_msg"
+								ng-show="boardForm.boardSubject.$error.maxlength || 
+										 boardForm.boardSubject.$error.minlength">
+								<td colspan="2" class="col-xs-12">글제목은 2~50자이내로 적습니다</td>
+							</tr>
+							<!-- 게시글 제목 에러 메시징 끝 -->
+			
+							<tr>
+								<td><label for="boardContent" class="control-label">
+										<span style="color: red">*</span>내 용
+								</label></td>
+								<td>
+									<!--  ckeidtor 4 적용 -->
+									<!-- 동일 표현 : ckeditor="editorOptions" -->
+									<textarea data-ck-editor
+											  class="form-control"
+											  id="boardContent" 
+											  name="boardContent"
+											  cols="40" 
+											  rows="5" 
+											  title="글내용은 2~1000자이내로 적습니다" 
+											  ng-model="boardContent" 
+											  ng-maxlength="1000" 
+											  ng-minlength="2"
+											  required
+											  autocomplete="off"></textarea>
+								</td>
+							</tr>
+			
+							<!-- 게시글 내용 에러 메시징 시작 -->
+							<tr id="boardContent_ERR" class="err_msg"
+								ng-show="boardForm.boardContent.$error.maxlength || 
+										 boardForm.boardContent.$error.minlength">
+								<td colspan="2" class="col-xs-12">글내용은 2~1000자이내로 적습니다</td>
+							</tr>
+							<!-- 게시글 내용 에러 메시징 끝 -->
+			
+							<tr>
+								<td><label for="boardFile" class="control-label"> 파일
+										첨부 </label></td>
+								<td>
+									<input type="file" 
+										   id="boardFile" 
+										   name="boardFile"
+										   class="form-control" 
+										   title="첨부 파일을 입력하십시오"
+										   autocomplete="off" />
+						   		</td>
+							</tr>
+			
+						</table>
+					
+					</div> <!-- modal-body -->
+				
+					<!-- <div id="commandCell" class="modal-footer"> -->
+					<div class="modal-footer">
+		
+						<!-- 게시글 쓰기 버튼 -->
+						<button type="button" 
+							    id="write_btn" 
+							    class="btn btn-info" 
+							    ng-disabled="boardForm.$invalid"
+						        ng-click="writeFormCheck()">등록</button>
+											   
+						<input type="reset" class="btn btn-info" value="다시쓰기" />
+						
+						<!-- 창닫기 -->
+						<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+					
+					</div>
+	
+				</div> <!-- modal-content -->
+	
+			</form>
+	
+		</div> <!-- modal-dialog -->
+		
+	</div>
+	
+</body>
+</html>

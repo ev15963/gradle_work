@@ -4,7 +4,7 @@
 		"oracle_thin-175cf06dab5-77a09b2d94634f39": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "XE",
+			"name": "java",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,

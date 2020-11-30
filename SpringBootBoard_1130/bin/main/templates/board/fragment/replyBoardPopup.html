@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>게시글 답글 쓰기</title>
+</head>
+<body>
+
+	
+	<div th:fragment="replyModal" class="modal fade" id="replyModal" role="dialog">
+	
+		<div class="modal-dialog modal-lg">
+		
+			<!-- Modal content-->
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<h4 class="modal-title">답변글 작성</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>				
+				</div>
+	
+				<form id="boardReplyForm" 
+					  name="boardReplyForm" 
+					  ng-model="boardReplyForm"
+					  method="post"
+					  novalidate
+					  ng-open="initReplyForm()">
+	
+					<!-- 
+					 ###### 히든 필드 인자 ######
+				 
+					  현재 페이지 : page
+					  게시글 번호 : boardNum
+					  답변글 관련 글번호 : boardReRef
+					  답변글 레벨 : boardReLev
+					  답변글 관련글 중 출력 순서 : boardReSeq
+				 	-->
+	
+					<!--  
+						thymeleaf의 특성상 JSP/EL과는 달리 비어 있는(null) 객체 불허. 페이지 에러 출력됨.
+					    공백/Null 점검 필요 : Exception evaluating SpringEL expression 발생할 수 있음 
+					    ex) th:if="${#strings.isEmpty(article)} 
+				    -->
+						
+					<input type="text" name="page" th:value="${pageVO.page}" size="5" readonly />
+					<input type="text" name="boardNum" size="5" readonly />
+					<input type="text" name="boardReRef"  size="5" readonly /> 
+					<input type="text" name="boardReLev"  size="5" readonly /> 
+					<input type="text" name="boardReSeq"  size="5" readonly />
+	
+					<!-- 답변글 내용 시작 -->
+					<div class="modal-body" id="bt_article_content">
+	
+						<!-- bootstrap table 적용 -->
+						<table class="table table-striped table-hover">
+	
+							<tr class="form-group">
+								<td class="col-xs-2">
+									<label for="boardName" class="control-label">
+										<span style="color: red">*</span>작성자
+									</label>
+								</td>
+								<td class="col-xs-10">
+									<input type="text" 
+										   id="reply_boardName"
+										   name="boardName"
+										   ng-model="boardName"									   
+										   class="form-control"
+										   title="답변글 제목을 1~15자 이내로 입력하십시오" 
+										   ng-maxlength="15" 
+										   ng-minlength="1"
+										   required="true"  
+										   autocomplete="off" />
+								</td>
+							</tr>
+	
+							<!-- 작성자 에러 메시징 시작 -->
+							<tr id="boardName_err" class="err_msg"
+								ng-show="boardReplyForm.boardName.$error.maxlegnth || 
+								         boardReplyForm.boardName.$error.minlength">
+								<td colspan="2" class="col-xs-12">답변글 제목을 1~15자 이내로 입력하십시오</td>
+							</tr>
+							<!-- 작성자 에러 메시징 끝 -->
+	
+							<tr>
+								<td>
+									<label for="reply_boardPass" class="control-label"> 
+										<span style="color: red">*</span>비밀번호
+									</label>
+								</td>
+								<td>
+									<input type="password" 
+										   id="reply_boardPass"
+										   name="boardPass"
+										   ng-model="boardPass" 
+										   class="form-control"
+										   title="답변글 패쓰워드를 8~15자 이내로 입력하십시오" 
+										   ng-maxlength="15" 
+										   ng-minlength="8" 
+										   required="true" 
+										   autocomplete="off" />
+							    </td>
+							</tr>
+	
+							<!-- 패쓰워드 에러 메시징 시작 -->
+							<tr id="boardPass_err" class="err_msg"
+								ng-show="boardReplyForm.boardPass.$error.maxlength || 
+								 		 boardReplyForm.boardPass.$error.minlength">
+								<td colspan="2" class="col-xs-12">답변글 패쓰워드를 8~15자 이내로 입력하십시오</td>
+							</tr>
+							<!-- 패쓰워드 에러 메시징 끝 -->
+	
+							<tr>
+								<td>
+									<label for="reply_boardSubject" class="control-label">
+										<span style="color: red">*</span>제 목
+									</label>
+								</td>
+								<td>
+									<input type="text"
+										   id="reply_boardSubject"
+										   name="boardSubject" 
+										   ng-model="boardSubject"
+										   class="form-control"
+										   title="글제목은 1~25자이내로 적습니다" 
+										   ng-maxlength="25" 
+										   ng-minlength="1" 
+										   required="true"
+										   autocomplete="off" />
+							    </td>
+							</tr>
+	
+							<!-- 답변글 제목 에러 메시징 시작 -->
+							<tr id="boardSubject_err" class="err_msg"
+								ng-show="boardReplyForm.boardSubject.$error.maxlength || 
+								 		 boardReplyForm.boardSubject.$error.minlength">
+								<td colspan="2" class="col-xs-12">글제목은 1~25자이내로 적습니다</td>
+							</tr>
+							<!-- 답변글 제목 에러 메시징 끝 -->
+	
+							<tr>
+								<td>
+									<label for="reply_boardContent" class="control-label">
+										<span style="color: red">*</span>내 용
+									</label>
+								</td>
+								<td>
+									<textarea id="reply_boardContent" 
+											  name="boardContent"
+										      cols="40" rows="5"
+											  title="글내용은 1~1000자이내로 적습니다" 
+											  class="form-control"
+											  ng-model="boardContent" 
+											  ng-maxlength="1000" 
+											  ng-minlength="1"
+											  required="true"
+											  autocomplete="off"></textarea>
+							  	</td>
+							</tr>
+	
+							<!-- 답변글 내용 에러 메시징 시작 -->
+							<tr id="boardContent_err" class="err_msg"
+								ng-show="boardReplyForm.boardContent.$error.maxlength || 
+								 		 boardReplyForm.boardContent.$error.minlength">
+								<td colspan="2" class="col-xs-12">글내용은 1~1000자이내로 적습니다</td>
+							</tr>
+							<!-- 답변글 내용 에러 메시징 끝 -->
+	
+						</table>
+	
+					</div>
+					<!-- 답변글 내용 끝 -->
+	
+					<div class="modal-footer">
+					
+						폼점검 성공 여부 : {{boardReplyForm.$valid}}<br>
+	
+						<!-- 답변글 작성 버튼 -->
+						<button id="reply_submit_btn_" 
+								type="submit" 
+								class="btn btn-primary"
+							    ng-disabled="boardReplyForm.$invalid">답변글 등록</button>
+	
+						<!-- 답변글 리셋(초기화) 버튼 -->
+						<button id="reply_reset_btn" type="reset" class="btn btn-primary">다시 작성</button>
+	
+						<!-- 창닫기 -->
+						<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+					</div>  <!-- // footer -->
+	
+				</form>
+	
+			</div> <!-- // modal-content -->
+	
+		</div> <!--// modal-dialog -->
+		
+	</div> <!-- // modal  -->
+
+</body>
+</html>

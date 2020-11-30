@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javateam.SpringBootBoard.mapper.BoardMapper">
+
+	<!-- 게시글 쓰기 -->
+	<insert id="writeBoard" parameterType="BoardVO">
+	  <![CDATA[
+	   INSERT INTO board
+	   VALUES
+		(#{boardNum},
+		 #{boardName},
+		 #{boardPass},
+		 #{boardSubject},
+		 #{boardContent},
+		 #{boardFile},
+		 #{boardReRef},
+		 #{boardReLev},
+		 #{boardReSeq},
+		 #{boardReadCount},
+		 sysdate)
+		]]>
+	</insert>
+
+	<!-- 게시글 마지막 시퀀스 번호  -->
+	<select id="getBoardNumByLastSeq" resultType="int">
+		select board_seq.nextval from dual
+	</select>
+
+	<!-- 게시글 목록(페이징) -->
+	<select id="getArticleList" resultType="BoardVO">
+		SELECT * FROM (
+                    SELECT
+                           m.*,
+                           FLOOR((ROWNUM - 1)/#{rowsPerPage} + 1) page
+                    FROM (
+                             SELECT * FROM board
+                             ORDER BY BOARD_RE_REF DESC, BOARD_RE_SEQ ASC
+                      	 ) m
+        )
+     	WHERE page = #{page}
+	</select>
+
+	<!-- 전체 게시글 수 -->
+	<select id="getListCount" resultType="int">
+		SELECT COUNT(*) FROM board
+	</select>
+
+	<!-- 게시글 조회 -->
+	<select id="getBoard" parameterType="int" resultType="BoardVO">
+		SELECT * FROM board WHERE board_num=#{boardNum}
+	</select>
+
+	<!-- 게시글 조회수 수정(업데이트) -->
+	<update id="updateReadCount" parameterType="int">
+		UPDATE board SET board_readcount = board_readcount + 1
+		WHERE board_num = #{boardNum}
+	</update>
+
+	<!-- 게시글 수정 -->
+	<update id="updateBoard" parameterType="BoardVO">
+		UPDATE board SET
+			board_subject = #{boardSubject},
+			board_content = #{boardContent},
+			board_file = #{boardFile},
+			board_date = sysdate
+		WHERE board_num = #{boardNum}
+	</update>
+
+	<!-- 답변 게시글 원글 및 게시글 순서 수정  -->
+	<update id="updateBoardByRefAndSeq">
+		UPDATE board SET
+			board_re_seq = board_re_seq + 1
+		WHERE board_re_ref = #{boardReRef}
+		  AND board_re_seq > #{boardReSeq}
+	</update>
+
+	<!-- 답글 쓰기 -->
+	<insert id="replyWriteBoard" parameterType="BoardVO">
+	  <![CDATA[
+	   INSERT INTO board
+	   VALUES
+		 (board_seq.nextval,
+		 #{boardName},
+		 #{boardPass},
+		 #{boardSubject},
+		 #{boardContent},
+		 '',
+		 #{boardReRef},
+		 #{boardReLev},
+		 #{boardReSeq},
+		 #{boardReadCount},
+		 sysdate)
+		]]>
+	</insert>
+
+	<!-- 답글 게시글 수 -->
+	<select id="getCountReplys" resultType="int">
+		SELECT COUNT(*) FROM board
+		WHERE board_re_ref = #{boardNum} AND board_re_lev = 1
+	</select>
+
+	<!-- 게시글 삭제 -->
+	<delete id="deleteBoard" parameterType="int">
+		DELETE board WHERE board_num = #{boardNum}
+	</delete>
+
+	<!-- 게시글 "검색" 조회 -->
+	<select id="getBoardBySearch" resultType="BoardVO">
+		SELECT * FROM (
+                    SELECT
+                           m.*,
+                           FLOOR((ROWNUM - 1)/#{rowsPerPage} + 1) page
+                    FROM (
+                             SELECT * FROM board
+							<if test="searchKind=='제목'">
+							WHERE board_subject like '%' || #{searchWord} || '%'
+							</if>
+							<if test="searchKind=='내용'">
+							WHERE board_content like '%' || #{searchWord} || '%'
+							</if>
+                             ORDER BY BOARD_RE_REF DESC, BOARD_RE_SEQ ASC
+                      	 ) m
+        )
+     	WHERE page = #{page}
+	</select>
+	
+	<!-- 게시글 "검색" 총수 조회 -->
+	<select id="getCountBoardBySearch" resultType="int">
+        SELECT count(*) FROM board
+		<if test="searchKind=='제목'">
+		WHERE board_subject like '%' || #{searchWord} || '%'
+		</if>
+		<if test="searchKind=='내용'">
+		WHERE board_content like '%' || #{searchWord} || '%'
+		</if>	                	 
+	</select>
+
+</mapper>

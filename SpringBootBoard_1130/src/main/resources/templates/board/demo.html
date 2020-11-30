@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+<link rel="stylesheet" th:href="@{'/static/css/demo.css'}" />
+
+<script th:src="@{'/webjars/jquery/3.5.1/jquery.min.js'}" charset="UTF-8"></script>
+<script>
+$(function() {	
+	alert("demo")
+	$("span#fnt").text("java");
+});
+</script>
+</head>
+<body>
+<span id="fnt">abcd</span> 
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>게시글 수정</title>
+</head>
+<body>
+
+	<div th:fragment="replyUpdateModal" class="modal fade" id="replyUpdateModal">
+	
+		<div class="modal-dialog modal-lg">
+	
+			<!-- form -->
+			<form id="replyUpdateForm"
+				  name="replyUpdateForm"
+				  method="post"
+				  enctype="multipart/form-data"
+				  ng-model="replyUpdateForm"
+				  novalidate>
+	
+				<div class="modal-content">
+	
+					<div class="modal-header">
+						<h4 class="modal-title">게시글(답글) 수정</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+	
+					<div id="article_content" class="modal-body form-group">
+	
+					    <!-- 상태 플래그 점검 -->
+						<!-- <h6>패쓰2 : {{replyUpdateForm.reply_update_boardPass.$valid}},
+							제목(valid) : {{replyUpdateForm.reply_update_boardSubject.$valid}},
+							내용(valid) : {{replyUpdateForm.reply_update_boardContent.$valid}},
+					     -->
+						    <!-- text => hidden -->
+						    댓글 여부 :
+							<input type="text"
+								   id="reply_update_boardReLev"
+								   name="reply_update_boardReLev"
+								   ng-model="reply_update_boardReLev"
+								   readonly>
+						</h6>	   
+	
+	 					<div class="input-group mb-3">
+			  	 			<div class="input-group-prepend">
+								<label for="reply_update_boardNum"
+									   class="control-label input-group-text ml-2">글번호 : &nbsp;&nbsp;</label>
+							</div>
+							<input type="text"
+								   id="reply_update_boardNum"
+								   name="reply_update_boardNum"
+								   class="form-control input-sm mr-2"
+								   readonly />
+						</div>
+	
+						<div class="input-group mb-3">
+	             	 		<div class="input-group-prepend">
+								<label for="reply_update_boardName"
+									   class="control-label input-group-text ml-2">글쓴이 : &nbsp;&nbsp;</label>
+							</div>
+							<input type="text"
+								   id="reply_update_boardName"
+								   name="reply_update_boardName"
+								   class="form-control input-sm mr-2"
+								   readonly />
+						</div>
+	
+						<div class="input-group mb-3">
+	             	 		<div class="input-group-prepend">
+								<label for="reply_update_boardPass"
+									   class="control-label input-group-text ml-2">비밀번호 :</label>
+							</div>
+							<input type="password"
+								   id="reply_update_boardPass"
+								   name="reply_update_boardPass"
+								   title="게시글 패쓰워드를 8~20자 이내로 입력하십시오"
+								   ng-model="reply_update_boardPass"
+								   class="form-control input-sm mr-2"
+								   ng-pattern="/^(?=.*\w|(?=.*\d)|(?=.*[가-힣])|(?=.*\W)).{8,20}$/"								   
+								   required />
+						</div>
+	
+						<!-- 패쓰워드 에러 메시징 시작 -->
+						<div id="update_boardPass_ERR"
+							class="err_msg"
+							ng-show="replyUpdateForm.reply_update_boardPass.$error.pattern">
+							게시글 패쓰워드를 8~20자 이내로 입력하십시오
+						</div>
+						<!-- 패쓰워드 에러 메시징 끝 -->
+	
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label for="reply_update_boardSubject"
+									   class="control-label input-group-text ml-2">글제목 : &nbsp;&nbsp;</label>
+							</div>
+							<input type="text"
+								   id="reply_update_boardSubject"
+								   name="reply_update_boardSubject"
+								   title="글제목은 1~50자 이내로 적습니다"
+								   ng-model="reply_update_boardSubject"
+								   class="form-control input-sm mr-2"
+								   ng-pattern="/^(?=.*\w|(?=.*\d)|(?=.*[가-힣])|(?=.*\W)).{1,50}$/"	
+								   required 
+								   ng-init="replyUpdateForm.reply_update_boardSubject.$viewValue" />
+						</div>
+	
+						<!-- 게시글 제목 에러 메시징 시작 -->
+						<div id="update_boardSubject_ERR" class="err_msg"
+							 ng-show="replyUpdateForm.reply_update_boardSubject.$error.pattern"
+							 ng-hide="replyUpdateForm.reply_update_boardSubject.$valid">
+							글제목은 1~50자 이내로 적습니다
+						</div>
+						<!-- 게시글 제목 에러 메시징 끝 -->
+	
+					    <div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label for="reply_update_boardContent"
+									   class="control-label input-group-text ml-2">글내용 : &nbsp;&nbsp;</label>
+							</div>
+							
+							<textarea id="reply_update_boardContent"
+									  name="reply_update_boardContent"
+									  class="form-control input-sm mr-2"
+									  title="글내용은 1~1000자 이내로 적습니다"										  
+									  rows="5"
+									  style="width:calc(100% - 120px)"
+					  				  ng-model="reply_update_boardContent"
+									  ng-pattern="/^(?=.*\w|(?=.*\d)|(?=.*[가-힣])|(?=.*\W)).{1,1000}$/"	
+									  required></textarea>
+						</div>
+	
+						<!-- 게시글 내용 에러 메시징 시작 -->
+						<div id="boardContent_ERR" class="err_msg"
+							 ng-show="replyUpdateForm.reply_update_boardContent.$error.pattern"
+							 ng-hide="replyUpdateForm.reply_update_boardContent.$valid">
+							글내용은 2~1000자 이내로 적습니다
+						</div>
+						<!-- 게시글 내용 에러 메시징 끝 -->
+	
+					</div>
+	
+					<div class="modal-footer">
+	
+						<!-- 게시글 수정 버튼 -->
+						<button type="submit"
+								id="reply_update_btn_"
+								class="btn btn-default"
+								ng-disabled="replyUpdateForm.reply_update_boardPass.$invalid ||
+								             replyUpdateForm.reply_update_boardSubject.$error.pattern ||
+											 replyUpdateForm.reply_update_boardContent.$error.pattern"
+							    ng-click="">글수정</button>
+	
+						<button type="button"
+								class="btn btn-default"
+								data-dismiss="modal">닫기</button>
+	
+					</div>
+	
+				  </div>
+	
+				</div>
+	
+			</form>
+	
+		</div>
+	</div>
+	
+</body>
+</html>

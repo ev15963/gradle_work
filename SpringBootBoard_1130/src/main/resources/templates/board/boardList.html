@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	  lang="ko-kr">
+<head>
+<meta charset="UTF-8">
+<title>게시글 목록</title>
+
+<!-- favicon.ico 404 패치 -->
+<link rel="shortcut icon" href="#">
+
+<!-- bootstrap css -->
+<link rel="stylesheet" th:href="@{'/webjars/bootstrap/4.5.2/css/bootstrap.min.css'}">
+
+<!-- jQuery -->
+<script th:src="@{'/webjars/jquery/3.5.1/jquery.min.js'}" charset="UTF-8"></script>
+
+<!-- bootstrap JS -->
+<script th:src="@{'/webjars/bootstrap/4.5.2/js/bootstrap.min.js'}"></script>
+
+<!-- AngularJS -->
+<script th:src="@{'/webjars/angularjs/1.7.9/angular.min.js'}"></script>
+
+<!-- CK editor 4 -->
+<script th:src="@{'/ckeditor4/ckeditor.js'}"></script>
+
+<!-- ng-ckeditor (angularJS/ckeditor4 support) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-ckeditor/0.2.1/ng-ckeditor.min.js"></script>
+
+<!--  custom css -->
+<link rel="stylesheet" th:href="@{'/static/css/main.css'}">
+
+</head>
+<body>
+<script>
+// 외장화에 따른 광역 변수화 : 절대 경로, page
+// context Path
+// javascript 외장화시 절대 경로 문제 발생 => 미리 js 변수로 치환하여 설정하고 진입
+
+const contextPath= "[[${#request.getContextPath()}]]";
+var page = "[[${pageVO.page}]]";
+</script>
+
+<!-- javascript 외장화  -->
+<script th:src="@{'/static/js/custom/board.js'}" charset="UTF-8"></script>
+
+<!-- <script th:src="@{'/static/js/custom/ng-script.js'}" charset="UTF-8"></script> -->
+
+<!-- CK editor 4 -->
+<script>
+//$(function() { // 주의) jQuery 선언부 활성화시 에러 발생 가능 !
+//
+// 중요) filebrowserUploadUrl 설정이 없으면 이미지 "업로드 버튼" 출력 안됨 !
+// 
+  //CKEDITOR.replace("writeBoardContent", {
+
+	//filebrowserImageUploadUrl : "[[@{'/imageUploadCK5.do?type=Images'}]]",
+	//filebrowserUploadUrl      : "[[@{'/imageUploadCK5.do?type=Files'}]]"
+	// filebrowserUploadUrl : "[[@{'/imageUploadCK4.do?type=Files'}]]"
+   	// filebrowserUploadUrl      : '/upload.do?type=Files',
+  //});  
+
+//});
+</script> 
+</head>
+
+<body ng-app="boardFormApp">
+
+	<!-- 페이지 관련 변수들 -->
+	<div id="form_dashboard">
+		<table id="flag_tbl" class="col-10 table table-dark table-striped table-bordered">
+			<tr>
+				<th>총 게시글 수 : </th><td>[[${pageVO.listCount}]]</td>
+				<th>현재 페이지 : </th><td>[[${pageVO.page}]]</td>
+				<th>총 페이지 : </th><td>[[${pageVO.maxPage}]]</td>
+				<th>시작 페이지 : </th><td>[[${pageVO.startPage}]]</td>
+				<th>끝 페이지 : </th><td>[[${pageVO.endPage}]]</td>
+			</tr>
+		</table>
+	</div>
+	
+	<!-- -------------------------------------------------------------------- -->
+	
+	<div id="popups" ng-controller="boardFormController">
+
+		<!-- 게시글정보 쓰기 시작 -->
+		<div th:insert="~{board/fragment/writeBoardPopup::writeModal}"></div>
+		<!-- 게시글정보 쓰기 끝 -->
+	
+		<!-- 게시글정보 보기(팝업) 시작 -->
+	    <div th:insert="~{board/fragment/viewBoardPopup::viewModal}"></div>
+		<!-- 게시글정보 보기(팝업) 끝 -->
+	
+		<!-- 게시글정보 원글 수정(팝업) 시작 -->
+		<div th:insert="~{board/fragment/updateBoardPopup::updateModal}"></div>
+		<!-- 게시글정보 원글 수정(팝업) 끝 -->
+		
+		<!-- 게시글정보 댓글 수정(팝업) 시작 -->
+		<div th:insert="~{board/fragment/replyUpdateBoardPopup::replyUpdateModal}"></div>
+		<!-- 게시글정보 댓글 수정(팝업) 끝 -->
+	
+		<!-- 게시글 답글(댓글) 쓰기(팝업) 시작 -->
+		<div th:insert="~{board/fragment/replyBoardPopup::replyModal}"></div>
+		<!-- 게시글 답글(댓글) 쓰기(팝업) 끝 -->
+	
+		<!-- 게시글 삭제(팝업) 시작 -->
+		<div th:insert="~{board/fragment/deleteBoardPopup::deleteModal}"></div>
+		<!-- 게시글 삭제(팝업) 끝 -->
+		
+	</div> <!--// boardFormController -->
+	
+	<!-- -------------------------------------------------------------------- -->
+	
+	<br>
+	<h3 align="center">게시글 목록</h3>
+    <br>
+
+	<!-- 게시판 리스트 시작 -->
+	<div id="listForm" style="width: 800px; margin: auto">
+
+		<div th:if="${not #lists.isEmpty(articleList) && pageVO.listCount > 0}">
+
+			<!-- 게시글 부분 시작 -->
+			<table id="board_tbl" class="table table-striped table-hover">
+
+				<tr id="tr_top">
+					<td>번호</td>
+					<td>글번호</td>
+					<td>제목</td>
+					<td>작성자</td>
+					<td>날짜</td>
+					<td>조회수</td>
+				</tr>
+
+				<tr th:each="article, st : ${articleList}">
+					<td>[[${st.count + (pageVO.page-1)*10}]]</td>
+					<td>[[${article.boardNum}]]</td>
+
+					<td>
+						
+						<span th:if="${article.boardReLev != 0}">
+							<th:block th:each="a: ${#numbers.sequence(1, article.boardReLev * 2)}">
+								&nbsp;
+							</th:block>
+							▶
+						</span>
+						<span th:unless="${article.boardReLev != 0}">▶</span>	
+
+						<a href="#?page=1"
+						   th:id="${'boardNum_'+article.boardNum}"
+						   data-toggle="modal"
+						   data-target="#viewModal">
+							[[${article.boardSubject}]]
+						</a>
+
+					</td>
+
+					<td>[[${article.boardName}]]</td>
+					<td>
+						[[${#dates.format(article.boardDate, 'yyyy년  M월 d일  HH:mm:ss')}]]
+					</td>
+					<td th:id="${'boardReadCount_'+article.boardNum}">
+						[[${article.boardReadCount}]]
+					</td>
+				</tr>
+
+			</table>
+			<!-- 게시글 부분 끝 -->
+
+			<!-- 페이징 시작 -->
+			<!-- 페이징 모듈 외장화 -->
+
+			<div th:if="${search_YN == 'search'}">
+				<div th:insert="~{board/fragment/pagingSearch::pagingSearch}"></div>
+			</div>
+			
+			<div th:if="${search_YN != 'search'}">
+				<div th:insert="~{board/fragment/paging::paging}"></div>
+			</div>
+			<!-- 페이징 끝 -->
+
+		</div>
+
+		<!-- 등록글 없을 경우 -->
+		<div th:if="${#lists.isEmpty(articleList) or pageVO.listCount==0}" id="boardEmptyArea">등록된 글이 없습니다.</div>
+
+		<!-- 게시글 메뉴  -->
+		<div id="board_foot_menu" class="row mt-5">
+
+			<!-- 메뉴 버튼 시작  -->
+
+				<!-- 글쓰기 버튼 시작  -->
+				<div class="col-3">
+
+					<div class="row">
+
+						<div class="col-6 pr-2">
+							<button type="button"
+									id="writeContentBtn"
+									class="btn btn-info"
+									data-toggle="modal"
+									data-target="#writeModal"
+									ng-click="initWriteForm()">
+									글쓰기
+							</button>
+						</div>
+
+						<div class="col-6 pl-2">
+							<button type="button"
+								id="list_btn"
+								class="btn btn-info">
+								목록
+							</button>
+						</div>
+					</div>
+
+				</div>
+				<!-- 글쓰기 버튼 끝 -->
+
+				<!-- 검색 시작  -->
+				<!-- thymeleaf get console 오류로 get method로 전환. 
+					 웹브라우저 콘솔 오류 나오더라도 결과에 문제 없으므로 문제시되지 않는다면 post로 전환 가능 -->
+				<form method="get"
+					  class="col-9"
+					  th:action="@{'/board/boardListbySearch.do'}">
+
+					<div class="row">
+
+						<div class="col-2 pr-0">
+							<select id="search_kind"
+									name="search_kind"
+									class="form-control shadow-sm">
+								<option>제목</option>
+								<option>내용</option>
+							</select>
+						</div>
+
+						<div class="col-7 ml-0">
+
+							<input type="text"
+								   id="search_word"
+								   name="search_word"
+								   class="form-control shadow-sm"
+								   placeholder="검색 ..."
+								   required="true"
+								   title="검색어를 입력하십시오">
+
+						</div>
+
+						<div class="col-3 pl-0">
+							<input type="submit"
+								   id="search_board_btn"
+								   class="btn btn-info"
+								   value="검색">
+						</div>
+
+					</div>
+
+				</form>
+				<!-- 검색 끝  -->
+
+		    </div>
+		    <!-- 메뉴 버튼 끝 -->
+
+		<!-- 게시글 메뉴  끝 -->
+
+	</div>
+	<!-- 게시판 리스트 끝 -->
+	
+	<script>
+
+	////////////////////////////////////////////////////////////////////////////////////////
+	// 
+	// 주의) angularjs와 공용 사용시 아래 부분을 활성화할 경우 기존 게시글이 보이지 않음(비활성화됨 : 버그 !)
+	/*  
+	CKEDITOR.replace('update_boardContent',
+		{
+			width : '655px',  // 입력창의 너비, 넓이는 config.js 에서 % 로 제어
+			height : '250px',  // 입력창의 높이
+			startupFocus : false
+		}
+	); */
+	</script>
+		
+</body>
+</html>
